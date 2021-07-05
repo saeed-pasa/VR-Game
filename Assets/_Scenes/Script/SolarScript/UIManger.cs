@@ -6,7 +6,7 @@ public class UIManger : MonoBehaviour
 {
     public GameObject merycuryPnl, venusPnl, earthpnl, marspnl, jupiterPnl, saturnpnl, uranusPnl, neptunepnl, player;
     public GameObject merycuryPrefab, venusPrefab, earthPrefab, marsPrefab, jupiterPrefab, saturnPrefab, uranusPrefab, neptunePrefab;
-    
+    public Transform S_mer, S_ven, S_earth, S_mars, S_jup, S_saturn, S_uranus, S_neptu;
     
     
     void Start()
@@ -24,35 +24,35 @@ public class UIManger : MonoBehaviour
     }
 
     public void AddMerycury(){
-        Instantiate(merycuryPrefab);
+        Instantiate(merycuryPrefab, S_mer.position , Quaternion.identity );
     }
 
     public void AddVenus(){
-        Instantiate(venusPrefab);
+        Instantiate(venusPrefab , S_ven.position , Quaternion.identity);
     }
 
     public void AddEarth(){
-        Instantiate(earthPrefab);
+        Instantiate(earthPrefab, S_earth.position , Quaternion.identity);
     }
 
     public void AddMars(){
-        Instantiate(marsPrefab);
+        Instantiate(marsPrefab , S_mars.position, Quaternion.identity);
     }
 
     public void AddJupiter(){
-        Instantiate(jupiterPrefab);
+        Instantiate(jupiterPrefab, S_jup.position , Quaternion.identity);
     }
 
     public void AddSaturn(){
-        Instantiate(saturnPrefab);
+        Instantiate(saturnPrefab,S_saturn.position, Quaternion.identity);
     }
 
     public void AddUranus(){
-        Instantiate(uranusPrefab);
+        Instantiate(uranusPrefab , S_uranus.position, Quaternion.identity);
     }
 
     public void AddnNptune(){
-        Instantiate(neptunePrefab);
+        Instantiate(neptunePrefab , S_neptu.position, Quaternion.identity);
     }
 
 
