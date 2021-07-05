@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class UIManger : MonoBehaviour
 {
-    public GameObject merycuryPnl, venusPnl, earthpnl, marspnl, jupiterPnl, saturnpnl, uranusPnl, neptunepnl; 
-    // Start is called before the first frame update
+    public GameObject merycuryPnl, venusPnl, earthpnl, marspnl, jupiterPnl, saturnpnl, uranusPnl, neptunepnl, player;
+    public GameObject merycuryPrefab, venusPrefab, earthPrefab, marsPrefab, jupiterPrefab, saturnPrefab, uranusPrefab, neptunePrefab;
+    
+    
+    
     void Start()
     {
         merycuryPnl.SetActive(true);
@@ -19,6 +22,39 @@ public class UIManger : MonoBehaviour
      
 
     }
+
+    public void AddMerycury(){
+        Instantiate(merycuryPrefab);
+    }
+
+    public void AddVenus(){
+        Instantiate(venusPrefab);
+    }
+
+    public void AddEarth(){
+        Instantiate(earthPrefab);
+    }
+
+    public void AddMars(){
+        Instantiate(marsPrefab);
+    }
+
+    public void AddJupiter(){
+        Instantiate(jupiterPrefab);
+    }
+
+    public void AddSaturn(){
+        Instantiate(saturnPrefab);
+    }
+
+    public void AddUranus(){
+        Instantiate(uranusPrefab);
+    }
+
+    public void AddnNptune(){
+        Instantiate(neptunePrefab);
+    }
+
 
     // Update is called once per frame
     public void NextOne()
