@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class UIManger : MonoBehaviour
 {
-    public GameObject istgah, pnltotal , spaceship, space, merycuryPnl, venusPnl, earthpnl, marspnl, jupiterPnl, saturnpnl, uranusPnl, neptunepnl;
-    public GameObject[] planets, planetssss;
-    public GameObject[] planetsSpace;
-    public Camera camera1, camera2 , camera3;
-    public float speed = 7;
-    bool isMove = false;
-    // Start is called before the first frame update
+    public GameObject merycuryPnl, venusPnl, earthpnl, marspnl, jupiterPnl, saturnpnl, uranusPnl, neptunepnl, player;
+    public GameObject merycuryPrefab, venusPrefab, earthPrefab, marsPrefab, jupiterPrefab, saturnPrefab, uranusPrefab, neptunePrefab;
+    public Transform S_mer, S_ven, S_earth, S_mars, S_jup, S_saturn, S_uranus, S_neptu;
+    
+    
     void Start()
     {
-        spaceship.SetActive(false);
         merycuryPnl.SetActive(true);
         venusPnl.SetActive(false);
         earthpnl.SetActive(false);
@@ -22,16 +19,43 @@ public class UIManger : MonoBehaviour
         saturnpnl.SetActive(false);
         uranusPnl.SetActive(false);
         neptunepnl.SetActive(false);
-        camera1.gameObject.SetActive(true);
-        camera2.gameObject.SetActive(false);
-        camera3.gameObject.SetActive(false);
-        for (int i = 0; i < planetssss.Length; i++)
-        {
+     
 
-            planetssss[i].SetActive(false);
-
-        }
     }
+
+    public void AddMerycury(){
+        Instantiate(merycuryPrefab, S_mer.position , Quaternion.identity );
+    }
+
+    public void AddVenus(){
+        Instantiate(venusPrefab , S_ven.position , Quaternion.identity);
+    }
+
+    public void AddEarth(){
+        Instantiate(earthPrefab, S_earth.position , Quaternion.identity);
+    }
+
+    public void AddMars(){
+        Instantiate(marsPrefab , S_mars.position, Quaternion.identity);
+    }
+
+    public void AddJupiter(){
+        Instantiate(jupiterPrefab, S_jup.position , Quaternion.identity);
+    }
+
+    public void AddSaturn(){
+        Instantiate(saturnPrefab,S_saturn.position, Quaternion.identity);
+    }
+
+    public void AddUranus(){
+        Instantiate(uranusPrefab , S_uranus.position, Quaternion.identity);
+    }
+
+    public void AddnNptune(){
+        Instantiate(neptunePrefab , S_neptu.position, Quaternion.identity);
+    }
+
+
     // Update is called once per frame
     public void NextOne()
     {
@@ -131,67 +155,6 @@ public class UIManger : MonoBehaviour
         neptunepnl.SetActive(true);
     }
 
-    public void PickMerycury()
-    {
-        spaceship.SetActive(true);
-    
 
-        istgah.SetActive(false);
-        pnltotal.SetActive(false);
-        camera1.gameObject.SetActive(false);
-        camera2.gameObject.SetActive(true);
-
-    }
-
-
-    void Update()
-    {
-        
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = camera2.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo))
-            {
-                if (hitInfo.collider.gameObject.tag == "Merycury")
-                {
-                    Debug.Log("Dd");
-                    camera3.gameObject.SetActive(true);
-                    camera2.gameObject.SetActive(false);
-                    camera1.gameObject.SetActive(false);
-                   
-                    GameObject planet = Instantiate(planets[0], space.transform.position, Quaternion.identity);
-                     planet.transform.parent = spaceship.transform;
-                    planet.transform.localScale = new Vector3(3, 3, 3);
-                    isMove = true;
-                }
-            }
-        }
-
-        if (isMove == true)
-        {
-            float step = speed * Time.deltaTime;
-            spaceship.transform.position = Vector3.MoveTowards(spaceship.transform.position, planetsSpace[0].transform.position, step);
-            if (spaceship.transform.position == planetsSpace[0].transform.position)
-            {
-                camera1.gameObject.SetActive(true);
-                camera3.gameObject.SetActive(false);
-                planetssss[0].SetActive(true);
-                planets[0].SetActive(false);
-                istgah.SetActive(true);
-                pnltotal.SetActive(true);
-                planetsSpace[0].SetActive(false);
-            }
-        }
-    }
-    void FixedUpdate()
-    {
-        float x = 2 * Input.GetAxis("Mouse X");
-       // float y = 2 * -Input.GetAxis("Mouse Y");
-       camera3.transform.Rotate(0, x, 0);
-        }
-
-
-
-    }
+}
 
