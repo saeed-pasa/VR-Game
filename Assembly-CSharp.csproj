@@ -63,6 +63,7 @@
      <Compile Include="Assets\_Scenes\Script\SolarScript\StartUI.cs" />
      <Compile Include="Assets\_Scenes\Script\SolarScript\Venus.cs" />
      <Compile Include="Assets\_Scenes\Script\showControllers.cs" />
+     <Compile Include="Assets\_Scenes\Script\Teleporter.cs" />
      <Compile Include="Assets\_Scenes\Script\InputModule.cs" />
      <Compile Include="Assets\_Scenes\Script\SolarScript\Jupiter.cs" />
      <Compile Include="Assets\_Scenes\Script\SolarScript\Neptune.cs" />
