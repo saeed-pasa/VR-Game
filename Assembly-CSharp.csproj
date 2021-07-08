@@ -70,6 +70,7 @@
      <Compile Include="Assets\_Scenes\Script\SolarScript\UIManger.cs" />
      <Compile Include="Assets\_Scenes\Script\SolarScript\Mercury.cs" />
      <Compile Include="Assets\_Scenes\Script\SolarScript\MArs.cs" />
+     <Compile Include="Assets\_Scenes\Script\ShowCanves.cs" />
  <Reference Include="Unity.XR.Management">
  <HintPath>D:/Code/Unity/VR2/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>
