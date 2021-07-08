@@ -66,11 +66,11 @@
      <Compile Include="Assets\_Scenes\Script\Teleporter.cs" />
      <Compile Include="Assets\_Scenes\Script\InputModule.cs" />
      <Compile Include="Assets\_Scenes\Script\SolarScript\Jupiter.cs" />
+     <Compile Include="Assets\_Scenes\Script\ShowCanves.cs" />
      <Compile Include="Assets\_Scenes\Script\SolarScript\Neptune.cs" />
      <Compile Include="Assets\_Scenes\Script\SolarScript\UIManger.cs" />
      <Compile Include="Assets\_Scenes\Script\SolarScript\Mercury.cs" />
      <Compile Include="Assets\_Scenes\Script\SolarScript\MArs.cs" />
-     <Compile Include="Assets\_Scenes\Script\ShowCanves.cs" />
  <Reference Include="Unity.XR.Management">
  <HintPath>D:/Code/Unity/VR2/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>
